@@ -72,7 +72,11 @@ db.createUser(globalUser);
  */
 db = db.getSiblingDB('db1');
 db.createCollection('db1_users');
-db.db1_users.insertMany([/** ... */]);
+db.db1_users.insertMany([
+  userOwner, 
+  userViewer1, 
+  userViewer2
+]);
 
 db = db.getSiblingDB('db2');
 db.createCollection('db2_files');
